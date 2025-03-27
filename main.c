@@ -62,9 +62,12 @@ int main() {
                 if(val != 1){
                     printf("Error ingrese unicamente enteros positivos");
                 }
+                if(cantidad>stock){
+                    printf("Error no hay stock suficiente\n");
+                }
                 stock-=cantidad;
                 ganancias+= cantidad*precio;
-                }while(val != 1);
+                }while(val != 1 || cantidad>stock);
                 if(cantidad>10){
                     ganancias+=(cantidad*precio)*0.2;
                 }else{
