@@ -46,7 +46,7 @@ int main() {
                 }while(val != 1);
 
                 do{
-                    printf("Ingrese el precio unitario del producto: ");
+                    printf("\nIngrese el precio unitario del producto: \n");
                     fflush(stdin);
                     val=scanf("%f", &precio);
                 }while(val != 1);
@@ -56,11 +56,11 @@ int main() {
         
             case 2:
                 do{
-                printf("Ingrese la cantidad a vender: ");
+                printf("\nIngrese la cantidad a vender: ");
                 fflush(stdin);
                 val=scanf("%d", &cantidad);
                 if(val != 1){
-                    printf("Error ingrese unicamente enteros positivos");
+                    printf("\nError ingrese unicamente enteros positivos\n");
                 }
                 if(cantidad>stock){
                     printf("Error no hay stock suficiente\n");
@@ -70,6 +70,7 @@ int main() {
                 }while(val != 1 || cantidad>stock);
                 if(cantidad>10){
                     ganancias+=(cantidad*precio)*0.2;
+                    printf("\nSe ha aplicado un descuento del 20 porciento\n");
                 }else{
                     ganancias+=(cantidad*precio);
                 }
