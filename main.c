@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 int main() {
-    int stock, cantidad, opcion, val;
+    int stock =-1, cantidad, opcion, val;
     float precio, ganancias;
     char nombre[30];
     char id[30];
@@ -20,6 +20,7 @@ int main() {
         scanf("%d", &opcion);
 
         switch(opcion) {
+            
             case 1: 
                 
                 do{
@@ -54,8 +55,14 @@ int main() {
                 
                 break; 
             
-        
+                
+
             case 2:
+
+                if(stock<0){
+                    printf("No hay stock disponible para vender\n");
+                    break;
+                }
                 do{
                 printf("\nIngrese la cantidad a vender: ");
                 fflush(stdin);
@@ -75,6 +82,7 @@ int main() {
                 }else{
                     ganancias+=(cantidad*precio);
                 }
+            
                 break;
 
             case 3:
@@ -98,6 +106,7 @@ int main() {
             case 5:
                 printf("Total de ganancias: $%.2f\n", ganancias);
                 break;
+            
 
             case 6:
                 printf("Saliendo del programa...\n");
@@ -106,7 +115,7 @@ int main() {
             default:
                 printf("Opcion invlida. Intente nuevamente.\n");
         }
-    } while (opcion != 5);
+    } while (opcion != 6 || stock<0);
 
     return 0;
 }
