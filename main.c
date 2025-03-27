@@ -2,9 +2,10 @@
 #include <stdio.h>
 
 int main() {
-    int id, stock, cantidad, opcion, val;
+    int stock, cantidad, opcion, val;
     float precio, ganancias;
     char nombre[30];
+    char id[30];
 
   
     do {
@@ -25,7 +26,7 @@ int main() {
                     
                 printf("Ingrese el ID del producto: ");
                 fflush(stdin);
-                val=scanf("%d", &id);
+                val=scanf("%s", &id);
                 if(val != 1){
                     printf("error ingrese unicamente numeros\n");
                 }
@@ -56,7 +57,7 @@ int main() {
         
             case 2:
                 do{
-                printf("\nIngrese la cantidad a vender (si vende mas de 10 se aplicara un descuento del %20): ");
+                printf("\nIngrese la cantidad a vender: ");
                 fflush(stdin);
                 val=scanf("%d", &cantidad);
                 if(val != 1){
@@ -88,7 +89,7 @@ int main() {
 
             case 4:
                 printf("\nInformacion del producto:\n");
-                printf("ID: %d\n", id);
+                printf("ID: %s\n", id);
                 printf("Nombre: %s", nombre);
                 printf("Stock disponible: %d\n", stock);
                 printf("Precio unitario: %.2f\n", precio);
