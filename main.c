@@ -77,7 +77,7 @@ int main() {
                 printf("Ingrese la cantidad a agregar al stock: ");
                 fflush(stdin);
                 val=scanf("%d", &cantidad);
-                }while(val != -1);
+                }while(val != 1);
                 
                 break;
 
