@@ -56,7 +56,7 @@ int main() {
         
             case 2:
                 do{
-                printf("\nIngrese la cantidad a vender: ");
+                printf("\nIngrese la cantidad a vender (si vende mas de 10 se aplicara un descuento del %20: ");
                 fflush(stdin);
                 val=scanf("%d", &cantidad);
                 if(val != 1){
