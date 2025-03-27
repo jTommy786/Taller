@@ -78,6 +78,7 @@ int main() {
                 fflush(stdin);
                 val=scanf("%d", &cantidad);
                 }while(val != 1);
+                stock+=cantidad;
                 
                 break;
 
