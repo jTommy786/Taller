@@ -86,6 +86,10 @@ int main() {
                 break;
 
             case 3:
+            if(stock<0){
+                printf("No hay stock disponible para vender\n");
+                break;
+            }
                 do{
                 printf("Ingrese la cantidad a agregar al stock: ");
                 fflush(stdin);
@@ -96,6 +100,10 @@ int main() {
                 break;
 
             case 4:
+            if(stock<0){
+                printf("No hay stock disponible para vender\n");
+                break;
+            }
                 printf("\nInformacion del producto:\n");
                 printf("ID: %s\n", id);
                 printf("Nombre: %s", nombre);
@@ -104,6 +112,10 @@ int main() {
                 break;
 
             case 5:
+            if(stock<0){
+                printf("No hay stock disponible para vender\n");
+                break;
+            }
                 printf("Total de ganancias: $%.2f\n", ganancias);
                 break;
             
